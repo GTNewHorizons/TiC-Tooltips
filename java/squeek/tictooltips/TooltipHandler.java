@@ -459,6 +459,15 @@ public class TooltipHandler
 
 		String damageColor = ColorHelper.getRelativeColor(ToolHelper.getRawDamage(tool, toolTag) + stoneboundDamage, ToolPartHelper.minAttack, ToolPartHelper.maxAttack);
 		toolTip.add(StringHelper.getLocalizedString("gui.toolstation3") + damageColor + StringHelper.getDamageString(damage));
+
+		// For ranged weapons (projectiles and thrown), the base damage is multiplied by the projectile speed to determine total damage.
+		// ToolHelper.getBaseDamage() returns -1 if the tool doesn't use base damage.
+		int baseDamage = ToolHelper.getBaseDamage(tool, toolTag);
+		if (baseDamage >= 0)
+		{
+			String baseDamageColor = ColorHelper.getRelativeColor(baseDamage, ToolPartHelper.minAttack, ToolPartHelper.maxAttack);
+			toolTip.add(StringHelper.getLocalizedString("tictooltips.tool.basedamage") + baseDamageColor + StringHelper.getDamageString(baseDamage));
+		}
 		if (sprintDamage != damage)
 		{
 			String sprintDamageColor = ColorHelper.getRelativeColor(ToolHelper.getRawDamage(tool, toolTag) + stoneboundDamage + (sprintDamage - damage), ToolPartHelper.minAttack, ToolPartHelper.maxAttack);

@@ -151,6 +151,17 @@ public class ToolHelper
 		return rawDamage;
 	}
 
+	/** Returns {@code -1} for tools that don't use base attack. */
+	public static int getBaseDamage(ToolCore tool, NBTTagCompound toolTag)
+	{
+		if (tool instanceof AmmoItem && toolTag.hasKey("BaseAttack"))
+		{
+			return toolTag.getInteger("BaseAttack");
+		}
+		else
+			return -1;
+	}
+
 	public static int getDamage(ToolCore tool, NBTTagCompound toolTag, float damageModifier)
 	{
 		return (int) getPreciseDamage(tool, toolTag, damageModifier);
