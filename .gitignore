@@ -17,6 +17,7 @@ libs/
 *#
 
 # IDEs
+.idea/
 .classpath
 .project
 .settings
