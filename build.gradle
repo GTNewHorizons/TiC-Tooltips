@@ -1,18 +1,24 @@
 buildscript {
-	repositories {
-		mavenCentral()
-		maven {
-			name = "gt"
-			url = "https://gregtech.overminddl1.com/"
-		}
-		maven {
-			name = "jitpack"
-			url = "https://jitpack.io"
-		}
-	}
-	dependencies {
-		classpath "com.github.GTNH2:ForgeGradle:FG_1.2-SNAPSHOT"
-	}
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+        maven {
+            name = "gt"
+            url = "https://gregtech.overminddl1.com/"
+        }
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "jitpack"
+            url = "https://jitpack.io"
+        }
+    }
+    dependencies {
+        classpath "com.github.GTNH2:ForgeGradle:FG_1.2-SNAPSHOT"
+    }
 }
 
 apply plugin: 'forge'
@@ -62,15 +68,15 @@ task processSourceMainJava(type:Copy) {
 }
 
 // remove apis only necessary for compilation from the build
-//task removeExternalAPIs(type:Delete) {
-//	delete += sourceSets.main.output.classesDir.getPath()+"/cofh"
-//}
+task removeExternalAPIs(type:Delete) {
+	delete += sourceSets.main.output.classesDir.getPath()+"/cofh"
+}
 
 // correct task ordering
-//afterEvaluate { project ->
-	//sourceMainJava.finalizedBy(processSourceMainJava)
-	//compileJava.finalizedBy(removeExternalAPIs)
-//}
+afterEvaluate { project ->
+	sourceMainJava.finalizedBy(processSourceMainJava)
+	compileJava.finalizedBy(removeExternalAPIs)
+}
 
 processResources {
 	inputs.property "vars", project.version + project.minecraft.version
