@@ -62,15 +62,15 @@ task processSourceMainJava(type:Copy) {
 }
 
 // remove apis only necessary for compilation from the build
-task removeExternalAPIs(type:Delete) {
-	delete += sourceSets.main.output.classesDir.getPath()+"/cofh"
-}
+//task removeExternalAPIs(type:Delete) {
+//	delete += sourceSets.main.output.classesDir.getPath()+"/cofh"
+//}
 
 // correct task ordering
-afterEvaluate { project ->
-	sourceMainJava.finalizedBy(processSourceMainJava)
-	compileJava.finalizedBy(removeExternalAPIs)
-}
+//afterEvaluate { project ->
+	//sourceMainJava.finalizedBy(processSourceMainJava)
+	//compileJava.finalizedBy(removeExternalAPIs)
+//}
 
 processResources {
 	inputs.property "vars", project.version + project.minecraft.version
