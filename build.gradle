@@ -64,7 +64,7 @@ task processSourceMainJava(type:Copy) {
 		include '**/package-info.java'
 		expand 'version':project.version, 'mcversion':project.minecraft.version
 	}
-	into project.buildDir.getPath()+"/sources/main/java"
+	into project.buildDir.getPath()+"/main/java"
 }
 
 processResources {
