@@ -27,10 +27,10 @@ archivesBaseName = project.projectDir.name
 
 sourceSets.main{
 	java {
-		srcDirs 'java', 'apis' //set the source folder as the /src subfolder
+		srcDirs 'src/java', 'apis' //set the source folder as the /src subfolder
 	}
 	resources {
-		srcDirs 'resources' //set the resources folder as the /resources subfolder
+		srcDirs 'src/resources' //set the resources folder as the /resources subfolder
 	}
 }
 
