@@ -58,17 +58,6 @@ dependencies {
 	compile "tconstruct:TConstruct:${project.minecraft.version}-${tcon_version}:deobf"
 }
 
-// variable substitution in java files
-task processSourceMainJava(type:Copy) {
-	inputs.property "vars", project.version + project.minecraft.version
-	from('java')
-	{
-		include '**/ModInfo.java'
-		expand 'version':project.version, 'mcversion':project.minecraft.version
-	}
-	into project.buildDir.getPath()+"/main/java"
-}
-
 processResources {
 	inputs.property "vars", project.version + project.minecraft.version
 	from(sourceSets.main.resources.srcDirs) {
