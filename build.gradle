@@ -21,8 +21,9 @@ minecraft {
 	version = minecraft_version + "-" + forge_version
 }
 
+version = "${minecraft_version}-${tictooltips_version}"
 group = project.projectDir.name.toLowerCase()
-archivesBaseName = project.projectDir.name + "-mc" + project.minecraft.version
+archivesBaseName = project.projectDir.name
 
 sourceSets.main{
 	java {

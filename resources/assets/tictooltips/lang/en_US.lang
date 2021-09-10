@@ -26,6 +26,7 @@ tictooltips.tool.bonus.vs.spiders=Bonus vs Spiders:
 tictooltips.tool.chance.to.behead=Chance to Behead: 
 tictooltips.tool.modifiers=Modifiers:
 tictooltips.tool.knockback=Knockback: 
+tictooltips.tool.basedamage=Base Attack: 
 tictooltips.tool.sprint.damage=Sprint Damage: 
 tictooltips.tool.crit.damage=Crit Damage Bonus: 
 # uses: material.cactus.ability/material.stone.ability, gui.toolstation4/gui.toolstation5
