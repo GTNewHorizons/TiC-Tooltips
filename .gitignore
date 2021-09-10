@@ -42,3 +42,6 @@ LICENSE.txt
 TiC-Tooltips.iml
 TiC-Tooltips.ipr
 TiC-Tooltips.iws
+TiC-Tooltips.api.iml
+TiC-Tooltips.main.iml
+TiC-Tooltips.test.iml
