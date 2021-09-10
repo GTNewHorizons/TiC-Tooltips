@@ -23,13 +23,16 @@ buildscript {
 
 apply plugin: 'forge'
 
-minecraft {
-	version = minecraft_version + "-" + forge_version
-}
-
 version = "${minecraft_version}-${tictooltips_version}"
 group = project.projectDir.name.toLowerCase()
 archivesBaseName = project.projectDir.name
+
+minecraft {
+	version = minecraft_version + "-" + forge_version
+    replaceIn "ModInfo.java"
+	replace '${version}', project.version
+    runDir = "run"
+}
 
 sourceSets.main{
 	java {
@@ -61,7 +64,6 @@ task processSourceMainJava(type:Copy) {
 	from('java')
 	{
 		include '**/ModInfo.java'
-		include '**/package-info.java'
 		expand 'version':project.version, 'mcversion':project.minecraft.version
 	}
 	into project.buildDir.getPath()+"/main/java"
