@@ -1,47 +1,28 @@
-# Builds & binaries
-build/
-bin/
-target/
-lib/
-launcher/
-.gradle/
-*.zip
-*.jar
-
-# Misc mod files
-media/
-libs/
-
-# Tmp files
-*~
-*#
-
-# IDEs
-.idea/
+.gradle
+.settings
+/.idea/
+/run/
+/build/
+/eclipse/
 .classpath
 .project
-.settings
-.pydevproject
-
-# MCP Files
-docs/
-conf/
-eclipse/
-jars/
-logs/
-runtime/
-temp/
-reobf/
-CHANGELOG
-LICENSE.txt
-*.bat
-*.sh
-
-# Misc
-*.rej
-TiC-Tooltips.iml
-TiC-Tooltips.ipr
-TiC-Tooltips.iws
-TiC-Tooltips.api.iml
-TiC-Tooltips.main.iml
-TiC-Tooltips.test.iml
+/bin/
+/config/
+/crash-reports/
+/logs/
+options.txt
+/saves/
+usernamecache.json
+banned-ips.json
+banned-players.json
+eula.txt
+ops.json
+server.properties
+servers.dat
+usercache.json
+whitelist.json
+/out/
+*.iml
+*.ipr
+*.iws
+src/main/resources/mixins.*.json

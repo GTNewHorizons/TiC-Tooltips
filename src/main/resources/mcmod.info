@@ -1,10 +1,10 @@
 [
 {
-  "modid": "TiCTooltips",
-  "name": "TiC Tooltips",
+  "modid": "${modId}",
+  "name": "${modName}",
   "description": "A simple client-side add-on for Tinkers' Construct that adds relevant stats to all tool part tooltips.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
   "url": "http://www.minecraftforum.net/topic/2509840-",
   "updateUrl": "",
   "authorList": ["squeek"],

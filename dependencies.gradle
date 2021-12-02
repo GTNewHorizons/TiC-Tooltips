@@ -1,0 +1,9 @@
+// Add your dependencies here
+
+dependencies {
+    compile("com.github.GTNewHorizons:TinkersConstruct:master-SNAPSHOT:dev")
+
+    compileOnly("com.github.GTNewHorizons:Battlegear2:master-SNAPSHOT:api") {
+        transitive = false
+    }
+}
