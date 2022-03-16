@@ -1,9 +1,9 @@
 // Add your dependencies here
 
 dependencies {
-    compile("com.github.GTNewHorizons:TinkersConstruct:1.9.0.13-GTNH:dev")
+    compile('com.github.GTNewHorizons:TinkersConstruct:1.9.0.14-GTNH:dev')
 
-    compileOnly("com.github.GTNewHorizons:Battlegear2:1.1.1.8:api") {
-        transitive = false
-    }
+    compileOnly('com.github.GTNewHorizons:Battlegear2:1.1.1.9:api') {transitive = false}
+    compileOnly('curse.maven:cofh-lib-220333:2388748')
+    compileOnly('curse.maven:cofh-core-69162:2388751')
 }
