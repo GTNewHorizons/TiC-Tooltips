@@ -1,8 +1,10 @@
 package squeek.tictooltips;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 import net.minecraftforge.common.MinecraftForge;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import squeek.tictooltips.helpers.ToolHelper;
 import squeek.tictooltips.helpers.ToolPartHelper;
 import squeek.tictooltips.proxy.ProxyExtraTiC;
@@ -17,40 +19,44 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = ModInfo.MODID, name = ModInfo.MODNAME, version = ModInfo.VERSION, dependencies = "required-after:TConstruct@[1.7.10-1.8,);after:ExtraTiC;after:TSteelworks;after:Mariculture", acceptableRemoteVersions="*")
-public class ModTiCTooltips
-{
-	public static boolean hasIguanaTweaks;
-	public static final Logger Log = LogManager.getLogger(ModInfo.MODID);
+@Mod(
+        modid = ModInfo.MODID,
+        name = ModInfo.MODNAME,
+        version = ModInfo.VERSION,
+        dependencies = "required-after:TConstruct@[1.7.10-1.8,);after:ExtraTiC;after:TSteelworks;after:Mariculture",
+        acceptableRemoteVersions = "*")
+public class ModTiCTooltips {
 
-	@SideOnly(Side.CLIENT)
-	@EventHandler
-	public void init(FMLInitializationEvent event)
-	{
-		MinecraftForge.EVENT_BUS.register(new TooltipHandler());
-	}
+    public static boolean hasIguanaTweaks;
+    public static final Logger Log = LogManager.getLogger(ModInfo.MODID);
 
-	@SideOnly(Side.CLIENT)
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
-		if (Loader.isModLoaded("ExtraTiC"))
-		{
-			ProxyExtraTiC.init();
-		}
-		if (Loader.isModLoaded("Mariculture"))
-		{
-			ProxyMariculture.init();
-		}
-		if (Loader.isModLoaded("IguanaTweaksTConstruct"))
-		{
-			hasIguanaTweaks = true;
-			ProxyIguanaTweaks.init();
-		}
+    @SideOnly(Side.CLIENT)
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(new TooltipHandler());
+    }
 
-		ToolHelper.init();
-		ToolPartHelper.determineMinAndMaxValues();
+    @SideOnly(Side.CLIENT)
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        if (Loader.isModLoaded("ExtraTiC")) {
+            ProxyExtraTiC.init();
+        }
+        if (Loader.isModLoaded("Mariculture")) {
+            ProxyMariculture.init();
+        }
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            hasIguanaTweaks = true;
+            ProxyIguanaTweaks.init();
+        }
 
-		FMLInterModComms.sendRuntimeMessage(ModInfo.MODID, "VersionChecker", "addVersionCheck", "http://www.ryanliptak.com/minecraft/versionchecker/squeek502/TiC-Tooltips");
-	}
+        ToolHelper.init();
+        ToolPartHelper.determineMinAndMaxValues();
+
+        FMLInterModComms.sendRuntimeMessage(
+                ModInfo.MODID,
+                "VersionChecker",
+                "addVersionCheck",
+                "http://www.ryanliptak.com/minecraft/versionchecker/squeek502/TiC-Tooltips");
+    }
 }
