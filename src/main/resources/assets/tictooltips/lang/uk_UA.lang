@@ -1,0 +1,50 @@
+# keypress related strings
+tictooltips.hold.key.for.stats=Затисніть %s для статистики
+tictooltips.hold.key.for.materials=Затисніть %s для матеріалів
+tictooltips.hold.key.for.bow.stats=Затисніть %s для статистики стріли
+tictooltips.hold.key.for.more=Затисніть %s для докладної інформації
+
+# material tooltips
+tictooltips.material.shoddiness.modifier= [Модифікатор: %s]
+tictooltips.material.arrow.weight=Вага стріли: 
+tictooltips.material.durability.modifier=Модифікатор міцності: 
+
+# pattern tooltips
+tictooltips.pattern.valid.materials=Відповідні матеріали:
+
+# tool tooltips
+tictooltips.tool.repair.material=Матеріал для ремонту: 
+tictooltips.tool.effective.durability=Ефективна міцність: 
+# uses: material.cactus.ability/material.stone.ability
+tictooltips.tool.shoddiness.modifier=%s Modifier: 
+# uncomment these if your language needs different syntax for jagged/stonebound 
+#tictooltips.tool.jagged.modifier=Модифікатор зазубреності: 
+#tictooltips.tool.stonebound.modifier=Модифікатор зв'язку з каменем: 
+tictooltips.tool.burn.duration=Тривалість горіння: 
+tictooltips.tool.bonus.vs.undead=Бонус проти нежиті: 
+tictooltips.tool.bonus.vs.spiders=Бонус проти павуків: 
+tictooltips.tool.chance.to.behead=Шанс на відсікання голови: 
+tictooltips.tool.modifiers=Модифікатори:
+tictooltips.tool.knockback=Віддача: 
+tictooltips.tool.basedamage=Базова шкода: 
+tictooltips.tool.sprint.damage=Шкода під час бігу: 
+tictooltips.tool.crit.damage=Бонус до критичної шкоди: 
+# uses: material.cactus.ability/material.stone.ability, gui.toolstation4/gui.toolstation5
+tictooltips.tool.stonebound.loss=Втрати через зв'язок з каменем:
+tictooltips.tool.stonebound.bonus=Бонус через зв'язок з каменем:
+tictooltips.tool.jagged.loss=Втрати через зазубреність:
+tictooltips.tool.jagged.bonus=Бонус через зазубреність:
+# uses: tictooltips.maximum, material.cactus.ability/material.stone.ability, gui.toolstation4/gui.toolstation5
+tictooltips.tool.max.stonebound.loss=Макс. втрати через зв'язок з каменем:
+tictooltips.tool.max.stonebound.bonus=Макс. бонус через зв'язок з каменем:
+tictooltips.tool.max.jagged.loss=Макс. втрати через зазубреність:
+tictooltips.tool.max.jagged.bonus=Макс. бонус через зазубреність:
+
+# generic
+tictooltips.minimum=Мін.
+tictooltips.maximum=Макс.
+tictooltips.unknown.part=<Невідома частина>
+tictooltips.infinite=Нескінченна
+
+# things that should be in TiC
+tictooltips.unbreakable=Незламна
