@@ -1,8 +1,8 @@
 # keypress related strings
-tictooltips.hold.key.for.stats=Затисніть %s для статистики
-tictooltips.hold.key.for.materials=Затисніть %s для матеріалів
-tictooltips.hold.key.for.bow.stats=Затисніть %s для статистики стріли
-tictooltips.hold.key.for.more=Затисніть %s для докладної інформації
+tictooltips.hold.key.for.stats=Утримуйте %s для статистики
+tictooltips.hold.key.for.materials=Утримуйте %s для матеріалів
+tictooltips.hold.key.for.bow.stats=Утримуйте %s для статистики стріли
+tictooltips.hold.key.for.more=Утримуйте %s для докладної інформації
 
 # material tooltips
 tictooltips.material.shoddiness.modifier= [Модифікатор: %s]
@@ -16,10 +16,10 @@ tictooltips.pattern.valid.materials=Відповідні матеріали:
 tictooltips.tool.repair.material=Матеріал для ремонту: 
 tictooltips.tool.effective.durability=Ефективна міцність: 
 # uses: material.cactus.ability/material.stone.ability
-tictooltips.tool.shoddiness.modifier=%s Modifier: 
+tictooltips.tool.shoddiness.modifier=%s Модифікатор: 
 # uncomment these if your language needs different syntax for jagged/stonebound 
-#tictooltips.tool.jagged.modifier=Модифікатор зазубреності: 
-#tictooltips.tool.stonebound.modifier=Модифікатор зв'язку з каменем: 
+tictooltips.tool.jagged.modifier=Модифікатор зазубреності: 
+tictooltips.tool.stonebound.modifier=Модифікатор зв'язку з каменем: 
 tictooltips.tool.burn.duration=Тривалість горіння: 
 tictooltips.tool.bonus.vs.undead=Бонус проти нежиті: 
 tictooltips.tool.bonus.vs.spiders=Бонус проти павуків: 
