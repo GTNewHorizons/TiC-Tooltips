@@ -7,7 +7,12 @@ import java.util.List;
 import net.minecraft.item.Item;
 
 import tconstruct.library.TConstructRegistry;
-import tconstruct.library.tools.*;
+import tconstruct.library.tools.ArrowMaterial;
+import tconstruct.library.tools.BowMaterial;
+import tconstruct.library.tools.BowstringMaterial;
+import tconstruct.library.tools.CustomMaterial;
+import tconstruct.library.tools.FletchingMaterial;
+import tconstruct.library.tools.ToolMaterial;
 import tconstruct.library.weaponry.ArrowShaftMaterial;
 import tconstruct.tools.TinkerTools;
 import tconstruct.weaponry.TinkerWeaponry;
