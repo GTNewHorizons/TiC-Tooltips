@@ -274,7 +274,7 @@ public class TooltipHandler {
         } else {
             if (mat.reinforced() > 0) toolTip.add(mat.style() + StringHelper.getReinforcedString(mat.reinforced()));
 
-            if (ToolPartHelper.isRod(item) || ToolPartHelper.isArrowShaft(item)) {
+            if (ToolPartHelper.isRod(item) || ToolPartHelper.isArrowShaft(item) || ToolPartHelper.isCrossbowBody(item)) {
                 ArrowShaftMaterial arrowShaftMat = (ArrowShaftMaterial) TConstructRegistry
                         .getCustomMaterial(matID, ArrowShaftMaterial.class);
 
@@ -372,8 +372,7 @@ public class TooltipHandler {
                 if (!hasTool || ToolHelper.isWeapon(tool)) toolTip.add(
                         StringHelper.getLocalizedString("gui.toolstation3")
                                 + ToolPartHelper.getAttackString(mat.attack()));
-            } else if (ToolPartHelper.isBowLimb(item) || ToolPartHelper.isCrossbowLimb(item)
-                    || ToolPartHelper.isCrossbowBody(item)) {
+            } else if (ToolPartHelper.isBowLimb(item) || ToolPartHelper.isCrossbowLimb(item)) {
                         toolTip.add(
                                 StringHelper.getLocalizedString("gui.toolstation2")
                                         + ToolPartHelper.getDurabilityString(mat.durability()));
