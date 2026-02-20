@@ -274,7 +274,8 @@ public class TooltipHandler {
         } else {
             if (mat.reinforced() > 0) toolTip.add(mat.style() + StringHelper.getReinforcedString(mat.reinforced()));
 
-            if (ToolPartHelper.isRod(item) || ToolPartHelper.isArrowShaft(item) || ToolPartHelper.isCrossbowBody(item)) {
+            if (ToolPartHelper.isRod(item) || ToolPartHelper.isArrowShaft(item)
+                    || ToolPartHelper.isCrossbowBody(item)) {
                 ArrowShaftMaterial arrowShaftMat = (ArrowShaftMaterial) TConstructRegistry
                         .getCustomMaterial(matID, ArrowShaftMaterial.class);
 
@@ -373,34 +374,33 @@ public class TooltipHandler {
                         StringHelper.getLocalizedString("gui.toolstation3")
                                 + ToolPartHelper.getAttackString(mat.attack()));
             } else if (ToolPartHelper.isBowLimb(item) || ToolPartHelper.isCrossbowLimb(item)) {
-                        toolTip.add(
-                                StringHelper.getLocalizedString("gui.toolstation2")
-                                        + ToolPartHelper.getDurabilityString(mat.durability()));
-                        BowMaterial bowMat = TConstructRegistry.getBowMaterial(matID);
-                        if (bowMat != null) {
-                            toolTip.add(
-                                    StringHelper.getLocalizedString("gui.toolstation6")
-                                            + ToolPartHelper.getBowDrawSpeedString(bowMat.drawspeed));
-                            toolTip.add(
-                                    StringHelper.getLocalizedString("gui.toolstation7")
-                                            + ToolPartHelper.getArrowSpeedString(bowMat.flightSpeedMax));
-                        }
-                    } else
-                if (ToolPartHelper.isBoltPart(item)) {
+                toolTip.add(
+                        StringHelper.getLocalizedString("gui.toolstation2")
+                                + ToolPartHelper.getDurabilityString(mat.durability()));
+                BowMaterial bowMat = TConstructRegistry.getBowMaterial(matID);
+                if (bowMat != null) {
                     toolTip.add(
-                            StringHelper.getLocalizedString("gui.toolstation2")
-                                    + ToolPartHelper.getDurabilityString(mat.durability()));
-
-                    ArrowMaterial arrowMat = TConstructRegistry.getArrowMaterial(matID);
-                    if (arrowMat != null) {
-                        toolTip.add(
-                                StringHelper.getLocalizedString("gui.toolstation22")
-                                        + ToolPartHelper.getBreakChanceString(arrowMat.breakChance));
-                        toolTip.add(
-                                StringHelper.getLocalizedString("gui.toolstation8")
-                                        + ToolPartHelper.getWeightString(arrowMat.mass));
-                    }
+                            StringHelper.getLocalizedString("gui.toolstation6")
+                                    + ToolPartHelper.getBowDrawSpeedString(bowMat.drawspeed));
+                    toolTip.add(
+                            StringHelper.getLocalizedString("gui.toolstation7")
+                                    + ToolPartHelper.getArrowSpeedString(bowMat.flightSpeedMax));
                 }
+            } else if (ToolPartHelper.isBoltPart(item)) {
+                toolTip.add(
+                        StringHelper.getLocalizedString("gui.toolstation2")
+                                + ToolPartHelper.getDurabilityString(mat.durability()));
+
+                ArrowMaterial arrowMat = TConstructRegistry.getArrowMaterial(matID);
+                if (arrowMat != null) {
+                    toolTip.add(
+                            StringHelper.getLocalizedString("gui.toolstation22")
+                                    + ToolPartHelper.getBreakChanceString(arrowMat.breakChance));
+                    toolTip.add(
+                            StringHelper.getLocalizedString("gui.toolstation8")
+                                    + ToolPartHelper.getWeightString(arrowMat.mass));
+                }
+            }
             // tough bindings and full guards, specifically, count as 'handles'
             // apparently this is due to them having 3 material cost, but
             // that is arbitrary, it's not *actually* due to them having 3 material cost
