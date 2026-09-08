@@ -152,6 +152,7 @@ public class TooltipHandler {
 
                 if (toolTipIndex >= event.toolTip.size() || !event.toolTip.get(toolTipIndex).equals(""))
                     event.toolTip.add(toolTipIndex++, "");
+
             }
             // Ctrl held
             else if (ctrlDown) {
