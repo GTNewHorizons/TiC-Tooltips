@@ -43,6 +43,8 @@ import tconstruct.tools.TinkerTools.MaterialID;
 import tconstruct.weaponry.weapons.Crossbow;
 import tconstruct.weaponry.weapons.LongBow;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 public class TooltipHandler {
 
     @SubscribeEvent
@@ -923,7 +925,7 @@ public class TooltipHandler {
         if (modifiersAvailable > 0) {
             toolTip.add(
                     StringHelper.getLocalizedString("gui.toolstation18") + EnumChatFormatting.WHITE
-                            + modifiersAvailable);
+                            + formatNumber(modifiersAvailable));
         }
 
         List<String> modifierToolTips = new ArrayList<String>();

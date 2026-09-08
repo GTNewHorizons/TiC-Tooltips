@@ -1,15 +1,14 @@
 package squeek.tictooltips.helpers;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 
 import net.minecraft.util.StatCollector;
 
 import tconstruct.library.util.HarvestLevels;
 
-public class StringHelper {
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 
-    private static DecimalFormat df = new DecimalFormat("##.##");
+public class StringHelper {
 
     // Taken from tconstruct.client.gui.ToolStationGui
     public static String getHarvestLevelName(int num) {
@@ -35,7 +34,7 @@ public class StringHelper {
     }
 
     public static String getDamageNumberString(int attack) {
-        return df.format(attack / 2f);
+        return formatNumber(attack / 2f);
     }
 
     public static String getDamageNumberString(float attack) {
@@ -52,40 +51,40 @@ public class StringHelper {
     }
 
     public static String getShoddinessString(float shoddiness) {
-        return df.format(Math.abs(shoddiness));
+        return formatNumber(Math.abs(shoddiness));
     }
 
     public static String getModifierString(float modifier) {
-        return df.format(modifier) + "x";
+        return formatNumber(modifier) + "x";
     }
 
     public static String getSpeedString(int speed) {
-        return df.format(speed / 100f);
+        return formatNumber(speed / 100f);
     }
 
     public static String getArrowSpeedString(int speed) {
-        return df.format(speed);
+        return formatNumber(speed);
     }
 
     public static String getAccuracyString(float accuracy) {
-        return df.format(accuracy) + "%";
+        return formatNumber(accuracy) + "%";
     }
 
     public static String getDrawSpeedString(int drawSpeed) {
-        return df.format(drawSpeed / 20f) + "s";
+        return formatNumber(drawSpeed / 20f) + "s";
     }
 
     public static String getDurabilityString(int durability) {
-        return durability != ToolHelper.INFINITE_DURABILITY ? Integer.toString(durability)
+        return durability != ToolHelper.INFINITE_DURABILITY ? formatNumber(durability)
                 : StatCollector.translateToLocal("tictooltips.infinite");
     }
 
     public static String getWeightString(float weight) {
-        return df.format(weight);
+        return formatNumber(weight);
     }
 
     public static String getArrowSpeedString(float arrowSpeed) {
-        return df.format(arrowSpeed);
+        return formatNumber(arrowSpeed);
     }
 
     public static String getAmmoDamageRangeString(int attack) {
@@ -93,15 +92,15 @@ public class StringHelper {
         int maxAttack = attack * 2;
 
         String heart = StringHelper.getLocalizedString("gui.partcrafter9");
-        return df.format(minAttack / 2f) + "-" + df.format(maxAttack / 2f) + heart;
+        return formatNumber(minAttack / 2f) + "-" + formatNumber(maxAttack / 2f) + heart;
     }
 
     public static String getDurationString(double duration) {
-        return df.format(duration) + "s";
+        return formatNumber(duration) + "s";
     }
 
     public static String getPercentageString(double percent) {
-        return df.format(percent * 100f) + "%";
+        return formatNumber(percent * 100f) + "%";
     }
 
     public static String getBreakChanceString(float breakChance) {
@@ -113,7 +112,7 @@ public class StringHelper {
     }
 
     public static String getKnockbackString(float knockback) {
-        return df.format(knockback);
+        return formatNumber(knockback);
     }
 
     public static HashMap<String, String> localizationAlternatives = new HashMap<String, String>();
