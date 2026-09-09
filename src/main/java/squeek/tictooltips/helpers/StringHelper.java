@@ -1,12 +1,12 @@
 package squeek.tictooltips.helpers;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 import java.util.HashMap;
 
 import net.minecraft.util.StatCollector;
 
 import tconstruct.library.util.HarvestLevels;
-
-import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 
 public class StringHelper {
 

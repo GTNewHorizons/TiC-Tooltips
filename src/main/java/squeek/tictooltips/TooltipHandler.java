@@ -1,5 +1,7 @@
 package squeek.tictooltips;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,8 +44,6 @@ import tconstruct.library.weaponry.ProjectileWeapon;
 import tconstruct.tools.TinkerTools.MaterialID;
 import tconstruct.weaponry.weapons.Crossbow;
 import tconstruct.weaponry.weapons.LongBow;
-
-import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 
 public class TooltipHandler {
 
