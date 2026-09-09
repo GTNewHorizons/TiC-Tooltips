@@ -1,5 +1,7 @@
 package squeek.tictooltips;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -152,6 +154,7 @@ public class TooltipHandler {
 
                 if (toolTipIndex >= event.toolTip.size() || !event.toolTip.get(toolTipIndex).equals(""))
                     event.toolTip.add(toolTipIndex++, "");
+
             }
             // Ctrl held
             else if (ctrlDown) {
@@ -922,7 +925,7 @@ public class TooltipHandler {
         if (modifiersAvailable > 0) {
             toolTip.add(
                     StringHelper.getLocalizedString("gui.toolstation18") + EnumChatFormatting.WHITE
-                            + modifiersAvailable);
+                            + formatNumber(modifiersAvailable));
         }
 
         List<String> modifierToolTips = new ArrayList<String>();
